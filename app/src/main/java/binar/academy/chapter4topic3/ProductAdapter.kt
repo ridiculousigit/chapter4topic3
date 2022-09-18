@@ -1,15 +1,13 @@
 package binar.academy.chapter4topic3
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import binar.academy.chapter4topic3.databinding.ItemProductBinding
 
-class ProductAdapter(var listProduct : ArrayList<DataProduct>) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
-    class ViewHolder(var binding : ItemProductBinding) : RecyclerView.ViewHolder(binding.root) {
+class ProductAdapter(private var listProduct : ArrayList<DataProduct>) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
+
+    class ViewHolder(private var binding : ItemProductBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bindproduct(itemProduct : DataProduct) {
             binding.product = itemProduct
         }
@@ -20,10 +18,7 @@ class ProductAdapter(var listProduct : ArrayList<DataProduct>) : RecyclerView.Ad
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        /*var view = LayoutInflater.from(parent.context).inflate(R.layout.item_product, parent, false)
-        return ViewHolder(view)*/
-
-        var view = ItemProductBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val view = ItemProductBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(view)
     }
 
