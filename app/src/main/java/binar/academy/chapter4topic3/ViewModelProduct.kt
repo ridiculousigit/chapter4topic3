@@ -7,32 +7,32 @@ class ViewModelProduct : ViewModel() {
     // Deklarasi Data
     val list = arrayListOf(
         DataProduct(
-            "Fantech MAXFIT67",
-            R.drawable.bg_keebs_maxfit67, 1299000,
-            "❇️Hotswappable\n" +
-                    "❇️Southfacing PCB\n" +
-                    "❇️3 Mode Of Connection (Bluetooth 5.0 Up To 3 Device, 2.4 GHz Wireless Dongle, Wired)"
+            "Fantech MAXFIT67 - Mechanical Keyboard 65% w/ Knob Layout - Outemu Switch",
+            R.drawable.bg_keebs_maxfit67, 1299000, 80,
+            "❇️ Hotswappable\n" +
+                    "❇️ Southfacing PCB\n" +
+                    "❇️ 3 Mode Of Connection"
         ),
         DataProduct(
-            "Vortex Series GT-6",
-            R.drawable.bg_keebs_gt, 899000,
-            "❇️Hotswappable\n" +
-                    "❇️Southfacing PCB\n" +
-                    "❇️3 Mode Of Connection (Bluetooth 5.0 Up To 3 Device, 2.4 GHz Wireless Dongle, Wired)"
+            "Vortex Series GT-6 - Mechanical Keyboard 65% w/ Knob Layout - Outemu Switch",
+            R.drawable.bg_keebs_gt, 899000, 120,
+            "❇️ Hotswappable\n" +
+                    "❇️ Southfacing PCB\n" +
+                    "❇️ 3 Mode Of Connection"
         ),
         DataProduct(
-            "Koodo Solar",
-            R.drawable.bg_keebs_solar, 850000,
-            "❇️Hotswappable\n" +
-                    "❇️Southfacing PCB\n" +
-                    "❇️3 Mode Of Connection (Bluetooth 5.0 Up To 3 Device, 2.4 GHz Wireless Dongle, Wired)"
+            "Koodo Solar - Mechanical Keyboard 75% w/ Knob Layout - Outemu Switch",
+            R.drawable.bg_keebs_solar, 850000, 60,
+            "❇️ Hotswappable\n" +
+                    "❇️ Southfacing PCB\n" +
+                    "❇️ 3 Mode Of Connection"
         ),
         DataProduct(
-            "DA Meca 6X Plus",
-            R.drawable.bg_keebs_mecax, 520000,
-            "❇️Hotswappable\n" +
-                    "❇️Southfacing PCB\n" +
-                    "❇️3 Mode Of Connection (Bluetooth 5.0 Up To 3 Device, 2.4 GHz Wireless Dongle, Wired)"
+            "DA Meca 6X Plus - Mechanical Keyboard 65% w/ Knob Layout - Outemu Switch",
+            R.drawable.bg_keebs_mecax, 520000, 250,
+            "❇️ Hotswappable\n" +
+                    "❇️ Southfacing PCB\n" +
+                    "❇️ 3 Mode Of Connection"
         )
     )
 

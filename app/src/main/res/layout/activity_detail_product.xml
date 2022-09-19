@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="product"
+            type="binar.academy.chapter4topic3.DataProduct" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stateListAnimator="@android:animator/fade_in"
+        tools:context=".DetailProductActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                app:menu="@menu/menu"
+                app:navigationIcon="@drawable/ic_back"
+                app:title="GitShop"
+                app:titleCentered="false"
+                app:titleTextColor="@color/black" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ImageView
+            android:id="@+id/imgDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:contentDescription="Gambar Produk"
+            android:scaleType="fitCenter"
+            app:imageResource="@{product.imgProduct}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+        <TextView
+            android:id="@+id/detailPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text='@{"Rp " + String.valueOf(product.priceProduct)}'
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgDetail" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="Gratis Ongkir"
+            app:layout_constraintStart_toEndOf="@+id/detailPrice"
+            app:layout_constraintTop_toBottomOf="@+id/imgDetail"
+            app:srcCompat="@drawable/ic_gratisongkir" />
+
+        <TextView
+            android:id="@+id/detailName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="@{product.nameProduct}"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailPrice" />
+
+        <TextView
+             android:id="@+id/detailStok"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="20dp"
+             android:layout_marginTop="16dp"
+             android:text='@{"Stok " + String.valueOf(product.stockProduct)}'
+             android:textSize="14sp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/detailName" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReview"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rounded_frame"
+            android:padding="5dp"
+            android:text="5.0 (100+)"
+            android:textAlignment="viewEnd"
+            android:textAllCaps="false"
+            android:textColor="@android:color/secondary_text_light"
+            android:textIsSelectable="false"
+            android:textSize="10sp"
+            android:typeface="sans"
+            app:backgroundTint="@color/whitesmoke"
+            app:icon="@drawable/ic_star"
+            app:iconGravity="start"
+            app:iconSize="20dp"
+            app:iconTint="@color/shining"
+            app:iconTintMode="src_in"
+            app:layout_constraintStart_toEndOf="@+id/detailStok"
+            app:layout_constraintTop_toBottomOf="@+id/detailName"
+            tools:ignore="SmallSp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rounded_frame"
+            android:padding="5dp"
+            android:text="Foto Pembeli (24)"
+            android:textAlignment="gravity"
+            android:textAllCaps="false"
+            android:textColor="@android:color/secondary_text_light"
+            android:textIsSelectable="false"
+            android:textSize="10sp"
+            android:typeface="sans"
+            app:backgroundTint="@color/whitesmoke"
+            app:layout_constraintStart_toEndOf="@+id/btnReview"
+            app:layout_constraintTop_toBottomOf="@+id/detailName"
+            tools:ignore="SmallSp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnReview" />
+
+        <TextView
+            android:id="@+id/txtOption"
+            style="@android:style/Widget.Material.TextView.SpinnerItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:text="Pilih varian: 3 switch"
+            android:textAlignment="viewStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtOption">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFirst_Variant"
+                    style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/bg_rounded_frame"
+                    android:text="Outemu Brown"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/mono"
+                    android:textIsSelectable="false"
+                    android:textSize="12sp"
+                    android:typeface="sans"
+                    app:backgroundTint="@color/whitesmoke"
+                    app:cornerRadius="20dp"
+                    app:icon="@drawable/ic_promo"
+                    app:iconGravity="end"
+                    app:iconSize="55dp"
+                    app:iconTint="?attr/colorError"
+                    app:iconTintMode="src_in" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSecond_Variant"
+                    style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/bg_rounded_frame"
+                    android:text="Outemu Brown"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="12sp"
+                    android:typeface="sans"
+                    app:backgroundTint="@color/whitesmoke"
+                    app:cornerRadius="20dp"
+                    app:icon="@drawable/ic_promo"
+                    app:iconGravity="end"
+                    app:iconSize="55dp"
+                    app:iconTint="?attr/colorError"
+                    app:iconTintMode="src_in" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnThird_Variant"
+                    style="@style/Widget.AppCompat.TextView.SpinnerItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/bg_rounded_frame"
+                    android:text="Outemu Brown"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textIsSelectable="false"
+                    android:textSize="12sp"
+                    android:typeface="sans"
+                    app:backgroundTint="@color/whitesmoke"
+                    app:cornerRadius="20dp"
+                    app:icon="@drawable/ic_promo"
+                    app:iconGravity="end"
+                    app:iconSize="55dp"
+                    app:iconTint="?attr/colorError"
+                    app:iconTintMode="src_in" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+        <TextView
+            android:id="@+id/txtOption2"
+            style="@android:style/Widget.Material.TextView.SpinnerItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:text="Detail Produk"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="@{product.descProduct}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtOption2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBuy"
+            style="@style/Widget.AppCompat.TextView.SpinnerItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rounded_frame"
+            android:text="Beli Langsung"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/wealth"
+            android:textIsSelectable="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:typeface="sans"
+            app:backgroundTint="@color/wealth"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

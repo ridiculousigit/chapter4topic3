@@ -3,8 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Projects/AndroidStudioProjects/chapter4topic3/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
-        <entry key="..\:/Projects/AndroidStudioProjects/chapter4topic3/app/src/main/res/layout/item_product.xml" value="0.1" />
+        <entry key="..\:/Projects/AndroidStudioProjects/chapter4topic3/app/src/main/res/drawable/bg_rounded_frame.xml" value="0.1135" />
+        <entry key="..\:/Projects/AndroidStudioProjects/chapter4topic3/app/src/main/res/drawable/bg_rounded_image.xml" value="0.165" />
+        <entry key="..\:/Projects/AndroidStudioProjects/chapter4topic3/app/src/main/res/drawable/ic_star.xml" value="0.1135" />
+        <entry key="..\:/Projects/AndroidStudioProjects/chapter4topic3/app/src/main/res/layout/activity_detail_pro.xml" value="0.2734375" />
+        <entry key="..\:/Projects/AndroidStudioProjects/chapter4topic3/app/src/main/res/layout/activity_detail_product.xml" value="0.1810996563573883" />
+        <entry key="..\:/Projects/AndroidStudioProjects/chapter4topic3/app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="..\:/Projects/AndroidStudioProjects/chapter4topic3/app/src/main/res/layout/item_product.xml" value="0.264" />
+        <entry key="..\:/Projects/AndroidStudioProjects/chapter4topic3/app/src/main/res/layout/ss.xml" value="0.264" />
+        <entry key="..\:/Projects/AndroidStudioProjects/chapter4topic3/app/src/main/res/menu/menu.xml" value="0.20887831946095917" />
       </map>
     </option>
   </component>

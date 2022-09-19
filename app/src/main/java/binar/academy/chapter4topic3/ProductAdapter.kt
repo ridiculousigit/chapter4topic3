@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import binar.academy.chapter4topic3.databinding.ItemProductBinding
 
-class ProductAdapter(private var listProduct : ArrayList<DataProduct>) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
+class ProductAdapter(private var listProduct: ArrayList<DataProduct>, private val itemListener: ItemsListener) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
 
     class ViewHolder(private var binding : ItemProductBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bindproduct(itemProduct : DataProduct) {
@@ -29,13 +29,20 @@ class ProductAdapter(private var listProduct : ArrayList<DataProduct>) : Recycle
         holder.img.setImageResource(data.imgProduct)*/
 
         holder.bindproduct(listProduct[position])
+        holder.itemView.setOnClickListener {
+            itemListener.onItemsSelected(listProduct[position])
+        }
     }
 
     override fun getItemCount(): Int {
         return listProduct.size
     }
 
-    fun setDataProduct(itemData : ArrayList<DataProduct>) {
-        this.listProduct = itemData
+    fun setDataProduct(data : ArrayList<DataProduct>) {
+        this.listProduct = data
+    }
+
+    interface ItemsListener {
+        fun onItemsSelected(detail : DataProduct)
     }
 }
